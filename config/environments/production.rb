@@ -95,6 +95,10 @@ Rails.application.configure do
   config.serve_static_assets = true
   config.serve_static_files = true
   config.assets.compile = true # LIGNE QUI PERMET AU IMG DE CHARGER SUR HEROKU
+  config.action_mailer.delivery_method = :smtp
+  # host = "https://meetup-geneva.herokuapp.com/"
+  # config.action.mailer.default_url_options = {host: host}
+  config.action.mailer.default_url_options = { host: "https://peaceful-brushlands-18116.herokuapp.com/"}
 
   config.action_mailer.smtp_settings = {
   :address => 'smtp.gmail.com',
