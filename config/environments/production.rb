@@ -99,7 +99,7 @@ Rails.application.configure do
   # # host = "https://meetup-geneva.herokuapp.com/"
   # # config.action.mailer.default_url_options = {host: host}
    config.action_mailer.default_url_options = { host: "https://peaceful-brushlands-18116.herokuapp.com/"}
-
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
   :address => 'smtp.gmail.com',
   :port => 587,
