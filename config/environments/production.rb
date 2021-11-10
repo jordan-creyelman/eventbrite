@@ -1,5 +1,5 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  #specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -61,7 +61,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "eventbritetest_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "Eventbrite_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
 
@@ -91,23 +91,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  #
+  config.serve_static_assets = true
+  config.serve_static_files = true
+  config.assets.compile = true # LIGNE QUI PERMET AU IMG DE CHARGER SUR HEROKU
 
-  config.action_mailer.delivery_method = :smtp
-  # host = "https://meetup-geneva.herokuapp.com/"
-  # config.action.mailer.default_url_options = {host: host}
-  config.action.mailer.default_url_options = { host: "meetup-geneva.herokuapp.com"}
-
-
-
-  # config.action_mailer.smtp_settings = {
-  # :address => 'smtp.gmail.com',
-  # :port => 587,
-  # :domain => 'gmail.com', #you can also use google.com
-  # :authentication => :plain,
-  # :user_name => "jordancreyelman1992@gmail.com",
-  # :password => "azertyazerty18",
-  # :enable_starttls_auto => true
-  # }
+  config.action_mailer.smtp_settings = {
+  :address => 'smtp.gmail.com',
+  :port => 587,
+  :domain => 'gmail.com', #you can also use google.com
+  :authentication => :plain,
+  :user_name => "jordancreyelman1992@gmail.com",
+  :password => "azertyazerty18",
+  :enable_starttls_auto => true
+  }
 
 
   
