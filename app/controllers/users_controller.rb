@@ -26,7 +26,7 @@ end
 
       if @user.valid?
         @user.save
-        UserMailer.with(user: @user).confirm.deliver_now 
+        UserNotifierMailer.send_signup_email(@user).deliver
         redirect_to new_user_path
       
         # format.html { redirect_to @user, notice: "User was successfully created." }
