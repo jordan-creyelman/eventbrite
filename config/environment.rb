@@ -6,7 +6,7 @@ Rails.application.initialize!
 ActionMailer::Base.smtp_settings = {
   :address => 'smtp.sendgrid.net',
   :port => 587,
-  :domain => 'https://peaceful-brushlands-18116.herokuapp.com/', #you can also use google.com
+  :domain => 'peaceful-brushlands-18116.herokuapp.com', #you can also use google.com
   :authentication => :plain,
   :user_name => 'apikey',
   :password => ENV['SENDGRID_PWD'],
