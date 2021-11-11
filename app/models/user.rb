@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,:trackable
 has_many :attendances
 has_many :events, through: :attendances
-has_many :admin_events, foreign_key: "event_admin_id", class_name: "Event", 
+has_many :admin_events, foreign_key: "event_admin_id", class_name: "Event"
        
 def welcome_send
   UserMailer.welcome_email(self).deliver_now
