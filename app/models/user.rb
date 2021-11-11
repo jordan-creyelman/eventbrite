@@ -17,7 +17,7 @@ class User < ApplicationRecord
   has_many :attendances
   has_many :events, through: :attendances
 
-  private
+  
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
