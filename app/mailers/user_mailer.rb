@@ -3,8 +3,8 @@ class UserMailer < ApplicationMailer
  
   def welcome_email(user)
     @user = user 
-    @url  = 'hpeaceful-brushlands-18116.herokuapp.com' 
-    mail(to: @user.email, subject: 'Bienvenue chez nous !') 
+    @url  = 'peaceful-brushlands-18116.herokuapp.com' 
+    mail(from : 'jordancreyelman1992@gmail.com' ,to: @user.email, subject: 'Bienvenue chez nous !') 
   end
 
   def event_subscription(event_admin, event, user)
